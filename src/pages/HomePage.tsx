@@ -8,6 +8,33 @@ import img2 from "../assets/google-cloud.webp";
 import img3 from "../assets/hubspot.webp";
 import img4 from "../assets/salesforce.webp";
 import img5 from "../assets/zoho-crm.webp";
+import SalesforceConsulting from "../assets/icons2/SalesforceConsulting.webp";
+import AppExchangeAppDev from "../assets/icons2/AppExchangeAppDev.webp";
+import Hubspot from "../assets/icons2/Hubspot.webp";
+import MobileAppDev from "../assets/icons2/MobileAppDev.webp";
+import PowerBI from "../assets/icons2/PowerBI.webp";
+import SalesforceAdminSupport from "../assets/icons2/SalesforceAdminSupport.webp";
+import SalesforceDevelopment from "../assets/icons2/SalesforceDevelopment.webp";
+import SalesforceIntegration from "../assets/icons2/SalesforceIntegration.webp";
+import SalesforceIssueSupport from "../assets/icons2/SalesforceIssueSupport.webp";
+import SalesforceMigration from "../assets/icons2/SalesforceMigration.webp";
+import Tableau from "../assets/icons2/Tableau.webp";
+import WebAppDev from "../assets/icons2/WebAppDev.webp";
+import Zoho from "../assets/icons2/Zoho.webp";
+import CPQ from "../assets/icons2/CPQ.png";
+import DA from "../assets/icons2/DataAnalytics.webp";
+import datacloud from "../assets/icons3/datacloud.webp";
+import hubspot from "../assets/icons3/hubspot.webp";
+import powerbi from "../assets/icons3/powerbi.webp";
+import SalesforceCRM from "../assets/icons3/SalesforceCRM.webp";
+import tableau from "../assets/icons3/tableau.webp";
+import zoho from "../assets/icons3/zoho.webp";
+import flutter from "../assets/icons3/flutter.webp";
+import HTML from "../assets/icons3/HTML.webp";
+import js from "../assets/icons3/js.webp";
+import nodejs from "../assets/icons3/nodejs.webp";
+import react from "../assets/icons3/react.webp";
+
 import { 
   Cpu, 
   Cloud, 
@@ -72,36 +99,36 @@ const images = [img1, img2, img3, img4,img5];
   {
     category: "Salesforce",
     items: [
-      { name: "Salesforce Consulting", icon: Users, link: "/services/salesforce-consulting" },
-      { name: "Salesforce Migration", icon: Cloud, link: "/services/salesforce-migration" },
-      { name: "Salesforce Integration", icon: Settings, link: "/services/salesforce-integration" },
-      { name: "AppExchange App Development", icon: Code2, link: "/services/appexchange-app" },
-      { name: "Salesforce Admin Support", icon: Users, link: "/services/salesforce-admin" },
-      { name: "Salesforce CPQ Implementation", icon: Zap, link: "/services/salesforce-cpq" },
-      { name: "Salesforce Development", icon: Code2, link: "/services/salesforce-dev" },
-      { name: "Salesforce Issue Support", icon: Settings, link: "/services/salesforce-support" },
+      { name: "Salesforce Consulting", icon: SalesforceConsulting, link: "/services/salesforce-consulting" },
+      { name: "Salesforce Migration", icon: SalesforceMigration, link: "/services/salesforce-migration" },
+      { name: "Salesforce Integration", icon: SalesforceIntegration, link: "/services/salesforce-integration" },
+      { name: "AppExchange App Development", icon: AppExchangeAppDev, link: "/services/appexchange-app" },
+      { name: "Salesforce Admin Support", icon: SalesforceAdminSupport, link: "/services/salesforce-admin" },
+      { name: "Salesforce CPQ Implementation", icon: CPQ, link: "/services/salesforce-cpq" },
+      { name: "Salesforce Development", icon: SalesforceDevelopment, link: "/services/salesforce-dev" },
+      { name: "Salesforce Issue Support", icon: SalesforceIssueSupport, link: "/services/salesforce-support" },
     ],
   },
   {
     category: "CRM",
     items: [
-      { name: "Zoho", icon: Users, link: "/services/zoho" },
-      { name: "HubSpot", icon: Users, link: "/services/hubspot" },
+      { name: "Zoho", icon: Zoho, link: "/services/zoho" },
+      { name: "HubSpot", icon: Hubspot, link: "/services/hubspot" },
     ],
   },
   {
     category: "Data & Analytics",
     items: [
-      { name: "Data & Analytics Solutions", icon: Database, link: "/services/data-analytics" },
-      { name: "Power BI", icon: BarChart3, link: "/services/power-bi" },
-      { name: "Tableau", icon: BarChart3, link: "/services/tableau" },
+      { name: "Data & Analytics Solutions", icon: DA, link: "/services/data-analytics" },
+      { name: "Power BI", icon: PowerBI, link: "/services/power-bi" },
+      { name: "Tableau", icon: Tableau, link: "/services/tableau" },
     ],
   },
   {
     category: "App Development",
     items: [
-      { name: "Web App Development", icon: Monitor, link: "/services/web-app" },
-      { name: "Mobile App Development", icon: Smartphone, link: "/services/mobile-app" },
+      { name: "Web App Development", icon: WebAppDev, link: "/services/web-app" },
+      { name: "Mobile App Development", icon: MobileAppDev, link: "/services/mobile-app" },
     ],
   },
 ];
@@ -240,7 +267,18 @@ const technologies = [
   { name: "Field Service Lightning", icon: field, category: "Salesforce Cloud" },
   { name: "Financial Service Cloud", icon: financial, category: "Salesforce Cloud" },
   { name: "Health Cloud", icon: health, category: "Salesforce Cloud" },
-  { name: "UiPath", icon: uipath, category: "Automation" },
+  { name: "datacloud", icon: datacloud, category: "Data & Analytics" },
+  { name: "SalesforceCRM", icon: SalesforceCRM, category: "Data & Analytics" },
+  { name: "powerbi", icon: powerbi, category: "Data & Analytics" },
+  { name: "tableau", icon: tableau, category: "Data & Analytics" },
+  { name: "Zoho", icon: zoho, category: "CRM" },
+  { name: "Hubspot", icon: hubspot, category: "CRM" },
+  { name: "flutter", icon: flutter, category: "App Developement" },
+  { name: "HTML", icon: HTML, category: "App Developement" },
+  { name: "js", icon: js, category: "App Developement" },
+  { name: "nodejs", icon: nodejs, category: "App Developement" },
+  { name: "react", icon: react, category: "App Developement" },
+  
 ];
 
 
@@ -428,8 +466,8 @@ const [activeCategory, setActiveCategory] = useState("All");
                       to={item.link}
                       className="flex items-center space-x-3 text-gray-700 hover:text-[#3e4e91] transition-colors duration-300"
                     >
-                      <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-[#223794]/10 group-hover:bg-[#29ec48]/10 transition-colors duration-300">
-                        <item.icon className="w-5 h-5 text-[#223794] group-hover:text-[#22379]" />
+                      <div className="w-9 h-9 flex items-center justify-center">
+                        <img src={item.icon} alt={item.name} className="w-7 h-7 object-contain" />
                       </div>
                       <span>{item.name}</span>
                     </Link>
