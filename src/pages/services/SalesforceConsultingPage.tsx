@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, CheckCircle, ArrowRight, Users, TrendingUp, Shield, Clock, Award } from 'lucide-react';
+import adop from "../../assets/icons4/adop.png";
+import fast from "../../assets/icons4/fast.png";
+import revenue from "../../assets/icons4/revenue.png";
+import risk from "../../assets/icons4/risk.png";
+import hero from "../../assets/icons4/schero.png";
+import processImg from "../../assets/icons4/sc1.jpg";
 
 const SalesforceConsultingPage = () => {
   const features = [
@@ -14,22 +20,22 @@ const SalesforceConsultingPage = () => {
 
   const benefits = [
     {
-      icon: TrendingUp,
+      icon: revenue,
       title: 'Increased Revenue',
       description: 'Average 25% increase in sales productivity within 6 months'
     },
     {
-      icon: Clock,
+      icon: fast,
       title: 'Faster Implementation',
       description: 'Reduce implementation time by 40% with our proven methodologies'
     },
     {
-      icon: Users,
+      icon: adop,
       title: 'Higher Adoption',
       description: '95% user adoption rate through our change management approach'
     },
     {
-      icon: Shield,
+      icon: risk,
       title: 'Risk Mitigation',
       description: 'Minimize project risks with experienced guidance and oversight'
     }
@@ -47,7 +53,7 @@ const SalesforceConsultingPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-[#223794] to-[#29ec48] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -73,12 +79,11 @@ const SalesforceConsultingPage = () => {
             </div>
             <div className="relative">
               <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                    <Building2 className="w-12 h-12 text-white" />
-                  </div>
-                  <p className="text-lg font-medium">Salesforce Success Partner</p>
-                </div>
+                <img 
+                  src={hero} 
+                  alt="Salesforce Success Partner" 
+                  className="w-full h-full object-contain rounded-2xl"
+                />
               </div>
             </div>
           </div>
@@ -134,9 +139,10 @@ const SalesforceConsultingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-6 h-6 text-blue-600" />
+                <div className="flex items-center justify-center mx-auto mb-4">
+                  <img src={benefit.icon} alt={benefit.title} className="w-16 h-16 object-contain" />
                 </div>
+
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </div>
@@ -183,12 +189,74 @@ const SalesforceConsultingPage = () => {
         </div>
       </section>
 
-      {/* Why Choose Winfomi */}
+      {/* Consulting Process */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      {/* Text Side */}
+      <div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          Our Methodical Salesforce Consulting Process
+        </h2>
+
+        <div className="space-y-8">
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Step 1 - Understanding Your Business
+            </h3>
+            <p className="text-gray-600">
+              Our process commences with a comprehensive evaluation of your current 
+              processes and implementations to gain a deep understanding of your 
+              organization's operations.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Step 2 - Roadmap for Success
+            </h3>
+            <p className="text-gray-600">
+              Our team of experienced consultants creates a meticulous blueprint for new 
+              Salesforce implementations, focusing on customer-centric strategies that 
+              unlock the full potential of your Salesforce investment.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Step 3 - Project Kick-Off
+            </h3>
+            <p className="text-gray-600">
+              We facilitate the acquisition of necessary Salesforce licenses and establish 
+              connections with Salesforce's account executives. Additionally, our dedicated 
+              team provides comprehensive assistance in implementing and customizing the 
+              Salesforce platform according to the devised solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Image Side */}
+      <div>
+        <img 
+          src={processImg} 
+          alt="Salesforce Consulting Process" 
+          className="w-full h-full object-cover rounded-2xl shadow-md"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+      {/* Why Choose Impviser */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Winfomi for Salesforce Consulting?
+              Why Choose Impviser for Salesforce Consulting?
             </h2>
           </div>
           
@@ -217,9 +285,55 @@ const SalesforceConsultingPage = () => {
           </div>
         </div>
       </section>
+            {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                How long does a Salesforce implementation take?
+              </h3>
+              <p className="text-gray-600">
+                Timelines vary by project scope, but most implementations take between 8–12 weeks 
+                from discovery to go-live.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Do you provide ongoing support after implementation?
+              </h3>
+              <p className="text-gray-600">
+                Yes. We offer continuous support, user training, and optimization services to ensure 
+                long-term success with Salesforce.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Can you help us migrate data from our existing system?
+              </h3>
+              <p className="text-gray-600">
+                Absolutely. Our team specializes in secure data migration, ensuring accuracy and 
+                minimal downtime during the transition.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Which industries do you serve?
+              </h3>
+              <p className="text-gray-600">
+                We work across multiple industries including finance, healthcare, real estate, 
+                manufacturing, technology, and non-profit sectors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Optimize Your Salesforce Investment?
