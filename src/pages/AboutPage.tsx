@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, Target, Award, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Users, Target, Globe, ArrowRight, CheckCircle } from "lucide-react";
 import { FaHandshake, FaShieldAlt, FaLightbulb, FaUsers } from "react-icons/fa";
+
 const AboutPage = () => {
-const values = [
+  const values = [
     {
       icon: <FaHandshake className="w-10 h-10 text-white" />,
       title: "Customer Success",
@@ -33,248 +34,169 @@ const values = [
       color: "from-[#29ec48] to-[#223794]",
     },
   ];
+
   const team = [
-  {
-    name: "Ramesh R",
-    role: "Founder & CEO",
-    experience: "",
-    certifications: [""],
-  },
-  {
-    name: "Vinith L",
-    role: "Technical Lead",
-    experience: "",
-    certifications: [""],
-  },
-  {
-    name: "Gowtham V",
-    role: "Module Lead",
-    experience: "",
-    certifications: [""],
-  },
-  {
-    name: "Chandhru G",
-    role: "Solutions Expert",
-    experience: "",
-    certifications: [""],
-  },
-  {
-    name: "Siva S",
-    role: "Delivery & Support Specialist",
-    experience: "",
-    certifications: [""],
-  },
-];
+    { name: "Ramesh R", role: "Founder & CEO", experience: "15+ Years", certifications: ["Salesforce Certified"] },
+    { name: "Vinith L", role: "Technical Lead", experience: "10+ Years", certifications: ["Azure Certified"] },
+    { name: "Gowtham V", role: "Module Lead", experience: "8+ Years", certifications: ["AWS Certified"] },
+    { name: "Chandhru G", role: "Solutions Expert", experience: "7+ Years", certifications: ["Google Cloud Certified"] },
+    { name: "Siva S", role: "Delivery & Support Specialist", experience: "6+ Years", certifications: ["ITIL Certified"] },
+  ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 bg-gradient-to-b from-white via-blue-50 to-green-50">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              About Winfomi
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're a team of passionate technology experts dedicated to helping businesses unlock their full potential through innovative digital solutions.
-            </p>
-          </div>
+      <section className="py-24 bg-gradient-to-r from-[#223794] to-[#29ec48] text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <h1 className="text-5xl font-extrabold mb-6 tracking-wide">About Winfomi</h1>
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed opacity-90">
+           Implement Vision. Empower Business.
+          </p>
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                To empower businesses of all sizes with cutting-edge technology solutions that drive growth, efficiency, and competitive advantage. We believe that the right technology, implemented correctly, can transform any organization.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
-                  <span className="text-gray-700">Expert-led implementations</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
-                  <span className="text-gray-700">Measurable business outcomes</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
-                  <span className="text-gray-700">Long-term partnership approach</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                To be the most trusted technology consulting partner for businesses seeking digital transformation. We envision a future where every organization can leverage the full power of modern technology to achieve their goals.
-              </p>
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Founded in 2018</h3>
-                <p className="text-gray-600">
-                  Started with a simple belief: technology should serve business goals, not complicate them. Today, we're proud to have helped hundreds of organizations achieve their digital transformation objectives.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
+{/* About Us Section */}
 <section className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Our Core Values</h2>
-      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-        The principles that drive our culture, decisions, and client partnerships.
-      </p>
+  <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    {/* Image / Illustration */}
+    <div>
+      <img
+        src="/images/about-impviser.jpg" // 👉 replace with your own image path
+        alt="Impviser Team"
+        className="rounded-2xl shadow-lg"
+      />
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-      {values.map((value, index) => (
-        <div
-          key={index}
-          className={`p-[2px] rounded-2xl bg-gradient-to-tr ${value.color} transition-all duration-300 hover:scale-105`}
-        >
-          <div className="h-full w-full bg-white rounded-2xl p-8 text-center hover:bg-gradient-to-tr hover:from-white hover:to-gray-50 transition">
-            <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#223794] to-[#29ec48] shadow">
-              {value.icon}
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-            <p className="text-gray-600">{value.description}</p>
-          </div>
-        </div>
-      ))}
+    {/* Text Content */}
+    <div>
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        About Us – 
+      </h2>
+      
+      <p className="text-lg text-gray-600 leading-relaxed mb-4">
+        Impviser is a trusted Salesforce consulting partner, dedicated to helping
+        businesses unlock the full potential of the Salesforce ecosystem. With
+        proven expertise and a team of certified professionals, we deliver
+        innovative, customer-focused solutions that create measurable business value.
+      </p>
+      <p className="text-lg text-gray-600 leading-relaxed mb-4">
+        We combine technical excellence with business insight to ensure every
+        solution fits your goals. Whether it’s implementation, integration,
+        customization, or optimization, we partner with you throughout your
+        Salesforce journey to drive measurable growth.
+      </p>
+  
     </div>
   </div>
 </section>
 
 
-
-           {/* <section className="py-20 bg-gradient-to-br from-[#223794] to-[#29ec48] text-white">
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    
- 
-    <h2 className="text-3xl lg:text-4xl font-bold mb-6">Visionaries</h2>
-    <p className="text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
-      Impviser’s are the passionate minds behind our innovation and transformation. 
-      With clarity of vision and a commitment to progress, they embrace change and 
-      harness technology to deliver meaningful impact. Guided by our core values, 
-      they are shaping the future with purpose and excellence.
-    </p>
-
-  
-    <h3 className="text-2xl font-semibold mb-8">
-      Accelerate Your Growth with Future-Ready Salesforce Solutions.
-    </h3>
-
-    <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 mb-12">
-     
-      <img 
-        src="/images/schedule-demo.png" 
-        alt="Schedule Demo" 
-        className="w-full md:w-1/2 rounded-xl shadow-md"
-      />
-
-    
-      <div className="w-full md:w-1/2">
-        <h4 className="text-xl font-semibold text-gray-900 mb-4">
-          Schedule a Free Consultation Today
-        </h4>
-        <div className="w-full h-[600px]">
-          <iframe
-            src="https://calendly.com/thirusolai1/30min?embed_domain=yourdomain.com&embed_type=Inline&hide_event_type_details=1&hide_gdpr_banner=1&hide_landing_page_details=1&hide_timezone=1"
-            className="w-full h-full rounded-lg border border-gray-200 shadow-sm"
-            frameBorder="0"
-          ></iframe>
+{/* Mission & Vision */}
+<section className="py-20 bg-gradient-to-br from-white via-blue-50 to-green-50">
+  <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
+    {/* Mission */}
+    <div className="p-10 rounded-2xl shadow-xl bg-white/80 backdrop-blur-md border border-gray-200 hover:shadow-2xl transition">
+      <div className="flex items-center gap-4 mb-6">
+        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#223794] to-[#29ec48] shadow-md">
+          <Target className="w-6 h-6 text-white" />
         </div>
+        <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
       </div>
-    </div>
-
-    {/* Contact CTA 
-    <h3 className="text-2xl font-semibold mb-6">
-      Empower your business with Impviser’s expertise. <br />
-      Schedule your free consultation today.
-    </h3>
-    <a
-      href="/contact"
-      className="bg-white text-[#223794] px-8 py-4 rounded-lg font-semibold shadow-md hover:bg-gray-100 transition-colors duration-200 inline-flex items-center space-x-2"
-    >
-      Contact Us
-    </a>
-  </div>
-</section>*/}
-
-
-
-
-      {/* Team */}
-    <section className="py-20 bg-gradient-to-br from-[#223794] to-[#29ec48]">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-        Meet Our Leadership Team
-      </h2>
-      <p className="text-xl text-gray-100">
-        Industry veterans with deep expertise and proven track records
+      <p className="text-lg text-gray-600 leading-relaxed mb-6">
+        Empowering businesses to achieve success by delivering innovative Salesforce solutions, exceptional services, and seamless experiences.
+      </p>
+      <p className="text-lg text-gray-600 leading-relaxed mb-6">
+        We are committed to building a skilled, passionate team, fostering a culture of collaboration, and creating lasting value for our customers, employees, and communities.
       </p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {team.map((member, index) => (
-        <div
-          key={index}
-          className="bg-white/10 backdrop-blur-lg p-8 rounded-xl text-center shadow-lg hover:scale-105 transition-transform"
-        >
-          <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Users className="w-12 h-12 text-white" />
-          </div>
-          <h3 className="text-xl font-semibold text-white mb-2">
-            {member.name}
-          </h3>
-          <p className="text-[#29ec48] font-medium mb-3">{member.role}</p>
-          <p className="text-gray-200 mb-4">{member.experience}</p>
-          <div className="space-y-1">
-            {member.certifications.map((cert, certIndex) => (
+    {/* Vision */}
+    <div className="p-10 rounded-2xl shadow-xl bg-white/80 backdrop-blur-md border border-gray-200 hover:shadow-2xl transition">
+      <div className="flex items-center gap-4 mb-6">
+        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#29ec48] to-[#223794] shadow-md">
+          <Globe className="w-6 h-6 text-white" />
+        </div>
+        <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
+      </div>
+      <p className="text-lg text-gray-600 leading-relaxed mb-6">
+        To be the most trusted global Salesforce partner, driving innovation and transformation through technology, and enabling organizations worldwide to unlock their full potential.
+      </p>
+     
+    </div>
+  </div>
+</section>
+
+
+      {/* Values */}
+      <section className="py-20 bg-gradient-to-br from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Our Core Values</h2>
+          <p className="text-lg text-gray-600 mb-16">
+            The principles that drive our culture, decisions, and client partnerships.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {values.map((value, index) => (
               <div
-                key={certIndex}
-                className="text-sm text-gray-100 bg-white/20 px-3 py-1 rounded-full inline-block"
+                key={index}
+                className={`p-[2px] rounded-2xl bg-gradient-to-tr ${value.color} hover:scale-105 transition-transform`}
               >
-                {cert}
+                <div className="h-full bg-white rounded-2xl p-8 text-center">
+                  <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#223794] to-[#29ec48] shadow-lg">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
-      {/* CTA Section */}
-   <section className="py-20 bg-gradient-to-r from-[#223794] to-[#29ec48]">
-  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 className="text-2xl lg:text-3xl font-bold text-white mb-6">
-      Empower your business with Impviser’s expertise. <br />
-      Schedule your free consultation today.
-    </h2>
+      {/* Team */}
+      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#29ec48] text-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-4">Meet Our Leadership Team</h2>
+          <p className="text-xl text-gray-100 mb-16">
+            Industry veterans with deep expertise and proven track records
+          </p>
 
-    {/* Optional description */}
-    {/* <p className="text-xl text-blue-100 mb-8">
-      Let's discuss how we can help transform your business with the right technology solutions.
-    </p> */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {team.map((member, index) => (
+              <div key={index} className="bg-white/10 p-8 rounded-xl backdrop-blur-md hover:scale-105 transition-transform">
+                <div className="w-24 h-24 rounded-full mx-auto mb-6 bg-gradient-to-br from-[#223794] to-[#29ec48] flex items-center justify-center shadow-lg">
+                  <Users className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                <p className="text-[#29ec48] font-medium mb-2">{member.role}</p>
+                <p className="text-gray-200 text-sm mb-4">{member.experience}</p>
+                {member.certifications.map((cert, i) => (
+                  <span key={i} className="text-xs bg-white/20 px-3 py-1 rounded-full inline-block text-gray-100">
+                    {cert}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    <Link
-      to="/contact"
-      className="bg-white text-[#223794] px-8 py-4 rounded-lg font-semibold shadow-md hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2"
-    >
-      <span>Schedule Now</span>
-      <ArrowRight className="w-5 h-5" />
-    </Link>
-  </div>
-</section>
-
+      {/* CTA */}
+      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#29ec48]">
+        <div className="max-w-4xl mx-auto px-6 text-center text-white">
+          <h2 className="text-3xl font-bold mb-8">
+            Empower your business with Winfomi’s expertise. <br /> Schedule your free consultation today.
+          </h2>
+          <Link
+            to="/contact"
+            className="bg-white text-[#223794] px-8 py-4 rounded-xl font-semibold shadow-lg hover:bg-gray-100 inline-flex items-center gap-2 transition"
+          >
+            <span>Schedule Now</span>
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

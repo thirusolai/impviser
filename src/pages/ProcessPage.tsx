@@ -124,15 +124,15 @@ const ProcessPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-20 bg-gradient-to-br from-[#223794] to-[#29ec48]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Our Proven Process
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed mb-8">
             A time-tested methodology that ensures successful project delivery, on-time completion, and measurable business results.
           </p>
-          <div className="flex justify-center space-x-8 text-sm text-gray-500">
+          <div className="flex justify-center space-x-8 text-sm text-gray-100">
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4" />
               <span>Faster Delivery</span>
@@ -159,12 +159,12 @@ const ProcessPage = () => {
               }`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
+                    <div className="w-16 h-16 bg-[#223794] text-white rounded-full flex items-center justify-center text-xl font-bold">
                       {phase.number}
                     </div>
                     <div>
                       <h2 className="text-3xl font-bold text-gray-900">{phase.title}</h2>
-                      <div className="flex items-center space-x-2 text-blue-600 mt-1">
+                      <div className="flex items-center space-x-2 text-[#223794] mt-1">
                         <Clock className="w-4 h-4" />
                         <span className="font-medium">{phase.duration}</span>
                       </div>
@@ -181,7 +181,7 @@ const ProcessPage = () => {
                       <ul className="space-y-2">
                         {phase.activities.map((activity, activityIndex) => (
                           <li key={activityIndex} className="flex items-start space-x-2">
-                            <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-[#29ec48] mt-0.5 flex-shrink-0" />
                             <span className="text-gray-600 text-sm">{activity}</span>
                           </li>
                         ))}
@@ -192,7 +192,7 @@ const ProcessPage = () => {
                       <ul className="space-y-2">
                         {phase.deliverables.map((deliverable, deliverableIndex) => (
                           <li key={deliverableIndex} className="flex items-start space-x-2">
-                            <FileText className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                            <FileText className="w-4 h-4 text-[#223794] mt-0.5 flex-shrink-0" />
                             <span className="text-gray-600 text-sm">{deliverable}</span>
                           </li>
                         ))}
@@ -202,9 +202,9 @@ const ProcessPage = () => {
                 </div>
                 
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl">
-                    <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <phase.icon className="w-12 h-12 text-blue-600" />
+                  <div className="bg-gradient-to-br from-[#f5f7ff] to-[#e9fdf1] p-8 rounded-2xl">
+                    <div className="w-24 h-24 bg-[#e6ebfa] rounded-full flex items-center justify-center mx-auto mb-6">
+                      <phase.icon className="w-12 h-12 text-[#223794]" />
                     </div>
                     <div className="text-center">
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">Phase {phase.number}</h3>
@@ -233,8 +233,8 @@ const ProcessPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {methodologies.map((methodology, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <methodology.icon className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-[#e6ebfa] rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <methodology.icon className="w-6 h-6 text-[#223794]" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{methodology.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{methodology.description}</p>
@@ -257,20 +257,20 @@ const ProcessPage = () => {
           </div>
           
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#e6ebfa]"></div>
             <div className="space-y-12">
               {[
-                { week: 'Week 1-2', phase: 'Discovery', color: 'bg-blue-600' },
-                { week: 'Week 3-5', phase: 'Strategy & Planning', color: 'bg-green-600' },
-                { week: 'Week 6-17', phase: 'Implementation', color: 'bg-purple-600' },
-                { week: 'Ongoing', phase: 'Support & Optimization', color: 'bg-orange-600' },
+                { week: 'Week 1-2', phase: 'Discovery', color: 'bg-[#223794]' },
+                { week: 'Week 3-5', phase: 'Strategy & Planning', color: 'bg-[#29ec48]' },
+                { week: 'Week 6-17', phase: 'Implementation', color: 'bg-[#223794]' },
+                { week: 'Ongoing', phase: 'Support & Optimization', color: 'bg-[#29ec48]' },
               ].map((item, index) => (
                 <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
                     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                       <div className={`w-4 h-4 ${item.color} rounded-full mb-3 ${index % 2 === 0 ? 'ml-auto' : ''}`}></div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.phase}</h3>
-                      <p className="text-blue-600 font-medium">{item.week}</p>
+                      <p className="text-[#223794] font-medium">{item.week}</p>
                     </div>
                   </div>
                 </div>
@@ -281,17 +281,17 @@ const ProcessPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#29ec48]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-gray-100 mb-8">
             Let's discuss your requirements and create a customized implementation plan.
           </p>
           <Link 
             to="/contact" 
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2"
+            className="bg-white text-[#223794] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center space-x-2"
           >
             <span>Begin Discovery Phase</span>
             <ArrowRight className="w-5 h-5" />

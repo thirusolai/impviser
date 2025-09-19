@@ -30,6 +30,12 @@ import HireSalesforceExpertPage from "./pages/services/HireSalesforceExpertPage"
 import AIPoweredSalesforcePage from "./pages/services/AIPoweredSalesforcePage";
 import ZohoPage from "./pages/services/ZohoPage";
 import HubSpotPage from "./pages/services/HubSpotPage";
+import MobileAppDevelopment from "./pages/services/MobileAppDevelopement";
+import WebDevelopmentPage from "./pages/services/WebDevelopmentPage";
+import PowerBIPage from "./pages/services/PowerBIPage";
+import TableauPage from "./pages/services/TableauPage"; 
+
+
 
 function App() {
   return (
@@ -57,7 +63,7 @@ function App() {
             <Route path="/services/salesforce-integration" element={<SalesforceIntegrationPage />} />
             <Route path="/services/appexchange-development" element={<AppExchangePage />} />
             <Route path="/services/salesforce-admin-support" element={<SalesforceAdminSupportPage />} />
-            <Route path="/services/salesforce-cpq" element={<SalesforceCPQPage />} />
+            <Route path="/services/salesforce-cpq-implementation" element={<SalesforceCPQPage />} />
             <Route path="/services/salesforce-development" element={<SalesforceDevelopmentPage />} />
             <Route path="/services/salesforce-issue-support" element={<SalesforceIssueSupportPage />} />
             <Route path="/services/data-analytics" element={<DataAnalyticsPage />} />
@@ -65,6 +71,11 @@ function App() {
             <Route path="/services/ai-powered-salesforce" element={<AIPoweredSalesforcePage />} />
             <Route path="/services/zoho" element={<ZohoPage />} />
             <Route path="/services/hubspot" element={<HubSpotPage />} />
+            <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
+            <Route path="/services/web-app-development" element={<WebDevelopmentPage />} />
+            <Route path="/services/power-bi" element={<PowerBIPage />} />
+            <Route path="/services/tableau" element={<TableauPage />} />
+
           </Routes>
         </main>
         <Footer />

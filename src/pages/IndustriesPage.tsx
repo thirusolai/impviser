@@ -10,8 +10,7 @@ import {
   ArrowRight, 
   CheckCircle,
   TrendingUp,
-  Users,
-  Shield
+  Users
 } from 'lucide-react';
 
 const IndustriesPage = () => {
@@ -69,17 +68,17 @@ const IndustriesPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+      <section className="py-20 bg-gradient-to-br from-[#223794] to-[#29ec48]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Industry Expertise
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed mb-8 text-blue-100">
             Deep industry knowledge combined with technical expertise to deliver solutions that address your sector's unique challenges and opportunities.
           </p>
           <Link 
             to="/contact" 
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center space-x-2"
+            className="bg-white text-[#223794] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center space-x-2"
           >
             <span>Discuss Your Industry Needs</span>
             <ArrowRight className="w-5 h-5" />
@@ -97,8 +96,8 @@ const IndustriesPage = () => {
               }`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <industry.icon className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-[#223794]/10 rounded-lg flex items-center justify-center">
+                      <industry.icon className="w-6 h-6 text-[#223794]" />
                     </div>
                     <h2 className="text-3xl font-bold text-gray-900">{industry.name}</h2>
                   </div>
@@ -112,7 +111,7 @@ const IndustriesPage = () => {
                       <ul className="space-y-2">
                         {industry.challenges.map((challenge, challengeIndex) => (
                           <li key={challengeIndex} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                            <div className="w-2 h-2 bg-[#29ec48] rounded-full"></div>
                             <span className="text-gray-600 text-sm">{challenge}</span>
                           </li>
                         ))}
@@ -123,7 +122,7 @@ const IndustriesPage = () => {
                       <ul className="space-y-2">
                         {industry.solutions.map((solution, solutionIndex) => (
                           <li key={solutionIndex} className="flex items-center space-x-2">
-                            <CheckCircle className="w-4 h-4 text-green-600" />
+                            <CheckCircle className="w-4 h-4 text-[#29ec48]" />
                             <span className="text-gray-600 text-sm">{solution}</span>
                           </li>
                         ))}
@@ -133,18 +132,18 @@ const IndustriesPage = () => {
                 </div>
                 
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl">
+                  <div className="bg-gradient-to-br from-[#223794]/10 to-[#29ec48]/10 p-8 rounded-2xl">
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Success Story</h3>
                     <p className="text-gray-700 leading-relaxed mb-6">
                       {industry.caseStudy}
                     </p>
                     <div className="flex items-center space-x-4 text-sm">
                       <div className="flex items-center space-x-2">
-                        <TrendingUp className="w-4 h-4 text-green-600" />
+                        <TrendingUp className="w-4 h-4 text-[#29ec48]" />
                         <span className="text-gray-600">Improved Efficiency</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <Users className="w-4 h-4 text-blue-600" />
+                        <Users className="w-4 h-4 text-[#223794]" />
                         <span className="text-gray-600">Better Experience</span>
                       </div>
                     </div>
@@ -170,19 +169,19 @@ const IndustriesPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">6+</div>
+              <div className="text-4xl font-bold text-[#223794] mb-2">6+</div>
               <div className="text-gray-600 font-medium">Industries Served</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-600 mb-2">500+</div>
+              <div className="text-4xl font-bold text-[#29ec48] mb-2">500+</div>
               <div className="text-gray-600 font-medium">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-600 mb-2">98%</div>
+              <div className="text-4xl font-bold text-[#223794] mb-2">98%</div>
               <div className="text-gray-600 font-medium">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">150+</div>
+              <div className="text-4xl font-bold text-[#29ec48] mb-2">150+</div>
               <div className="text-gray-600 font-medium">Happy Clients</div>
             </div>
           </div>
@@ -190,7 +189,7 @@ const IndustriesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
+      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#29ec48]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Industry Operations?
@@ -201,13 +200,13 @@ const IndustriesPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
+              className="bg-white text-[#223794] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Start Your Project
             </Link>
             <Link 
               to="/customer-stories" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#223794] transition-all duration-200"
             >
               View More Case Studies
             </Link>

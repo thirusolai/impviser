@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "../assets/logo.png";
-
+import { 
+  Building2, RefreshCw, LinkIcon, Store, Users, Target, Code, Headphones, 
+  BarChart3, Brain, Settings, Globe, Smartphone 
+} from 'lucide-react';
 // TypeScript declaration for Calendly
 declare global {
   interface Window {
@@ -34,6 +37,26 @@ const Header: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
+  const serviceCategories = [
+  {
+    title: 'Salesforce Services',
+    services: [
+      { name: 'Salesforce Consulting', link: '/services/salesforce-consulting', icon: Building2 },
+      { name: 'Salesforce Migration', link: '/services/salesforce-migration', icon: RefreshCw },
+      { name: 'Salesforce Integration', link: '/services/salesforce-integration', icon: LinkIcon },
+      { name: 'AppExchange App Development', link: '/services/appexchange-development', icon: Store },
+      { name: 'Salesforce Admin Support', link: '/services/salesforce-admin-support', icon: Users },
+      { name: 'Salesforce CPQ Implementation', link: '/services/salesforce-cpq-implementation', icon: Target },
+      { name: 'Salesforce Development', link: '/services/salesforce-development', icon: Code },
+      { name: 'Salesforce Issue Support', link: '/services/salesforce-issue-support', icon: Headphones },
+      { name: 'Data & Analytics Solutions', link: '/services/data-analytics', icon: BarChart3 },
+      { name: 'Hire a Salesforce Expert', link: '/services/hire-salesforce-expert', icon: Users },
+      { name: 'AI-Powered Salesforce Implementation', link: '/services/ai-powered-salesforce', icon: Brain },
+    ]
+  },
+];
 
   const services = [
     { name: "Salesforce Services", path: "", isHeader: true },
@@ -74,6 +97,9 @@ const Header: React.FC = () => {
       }, 500);
     }
   };
+
+  const allServices = serviceCategories.flatMap(category => category.services);
+
 
   return (
     <header
@@ -150,16 +176,15 @@ const Header: React.FC = () => {
           {/* Column 1 */}
           <div>
             <h4 className="text-[#1798c1] font-semibold mb-3">Salesforce</h4>
-            <ul className="space-y-2 text-gray-700">
-  <li><Link to="/services/salesforce-consulting" className="hover:text-[#1798c1]">Salesforce Consulting</Link></li>
-  <li><Link to="/services/salesforce-migration" className="hover:text-[#1798c1]">Salesforce Migration</Link></li>
-  <li><Link to="/services/salesforce-integration" className="hover:text-[#1798c1]">Salesforce Integration</Link></li>
-  <li><Link to="/services/appexchange-development" className="hover:text-[#1798c1]">AppExchange App Development</Link></li>
-  <li><Link to="/services/salesforce-admin-support" className="hover:text-[#1798c1]">Salesforce Admin Support</Link></li>
-  <li><Link to="/services/salesforce-cpq-implementation" className="hover:text-[#1798c1]">Salesforce CPQ Implementation</Link></li>
-  <li><Link to="/services/salesforce-development" className="hover:text-[#1798c1]">Salesforce Development</Link></li>
-  <li><Link to="/services/salesforce-issue-support" className="hover:text-[#1798c1]">Salesforce Issue Support</Link></li>
-</ul>
+             <ul className="space-y-2 text-gray-700">
+      {allServices.map((service) => (
+        <li key={service.name}>
+          <Link to={service.link} className="hover:text-[#1798c1] flex items-center gap-2">
+            <service.icon size={18} /> {service.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
 
           </div>
 

@@ -61,7 +61,7 @@ const ServicesPage = () => {
           name: 'Salesforce CPQ Implementation',
           description: 'Configure, Price, Quote implementation and optimization',
           icon: Target,
-          link: '/services/salesforce-cpq'
+          link: '/services/salesforce-cpq-implementation'
         },
         {
           name: 'Salesforce Development',
