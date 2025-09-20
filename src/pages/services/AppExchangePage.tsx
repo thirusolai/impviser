@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Store, CheckCircle, ArrowRight, Code, Users, TrendingUp, Shield } from 'lucide-react';
+import globe from "../../assets/icons4/globe.png";
+import scale from "../../assets/icons4/scale.png";
+import revenue from "../../assets/icons4/revenue.png";
+import risk from "../../assets/icons4/risk.png";
+import AX from "../../assets/icons4/ax.png";
 
 const AppExchangePage = () => {
   const appTypes = [
@@ -28,22 +33,22 @@ const AppExchangePage = () => {
 
   const benefits = [
     {
-      icon: TrendingUp,
+      icon: revenue,
       title: 'Revenue Generation',
       description: 'Monetize your Salesforce expertise through AppExchange sales'
     },
     {
-      icon: Users,
+      icon: globe,
       title: 'Global Reach',
       description: 'Access to millions of Salesforce users worldwide'
     },
     {
-      icon: Shield,
+      icon: risk,
       title: 'Security Reviewed',
       description: 'Salesforce security review ensures enterprise-grade security'
     },
     {
-      icon: Code,
+      icon: scale,
       title: 'Scalable Architecture',
       description: 'Multi-tenant architecture that scales with customer growth'
     }
@@ -52,7 +57,7 @@ const AppExchangePage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-[#223794] to-[#29ec48] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -139,8 +144,8 @@ const AppExchangePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-6 h-6 text-orange-600" />
+                <div className="w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                  <img src={benefit.icon} alt={benefit.title} className="w-16 h-16 object-contain" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
@@ -150,8 +155,68 @@ const AppExchangePage = () => {
         </div>
       </section>
 
+      {/* Our App Development Process Section with Image on Right */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Our App Development Process
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Building a successful AppExchange application requires a meticulous and structured approach. We begin with a Discovery and Ideation phase to refine your app concept, define its features, and create a clear roadmap. The Design and Development phase follows, where our certified developers build a robust, scalable, and secure application using Salesforce best practices.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                A critical part of our process is the Security Review Preparation, where we ensure your app meets all of Salesforce's stringent security and technical requirements. Finally, we assist with the Publishing and Marketing of your app, helping you get it live on the AppExchange and ready for customers.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2">
+              {/* This is a placeholder for your image */}
+              <img src={AX} alt="App Development Process" className="rounded-2xl shadow-lg w-full" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Impviser is Your Ideal Partner Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Why Impviser is Your Ideal Partner
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Partner with an experienced team that understands the nuances of the AppExchange marketplace.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Expertise</h3>
+              <p className="text-gray-600">Our developers have a deep understanding of the Salesforce platform and AppExchange requirements.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Security First Approach</h3>
+              <p className="text-gray-600">We build apps with security in mind, ensuring a smooth and successful security review process.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">End-to-End Support</h3>
+              <p className="text-gray-600">We guide you through the entire lifecycle, from initial idea to app publication and beyond.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-orange-600">
+      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
             Ready to Build Your AppExchange App?

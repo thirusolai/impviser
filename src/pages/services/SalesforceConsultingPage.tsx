@@ -6,7 +6,7 @@ import fast from "../../assets/icons4/fast.png";
 import revenue from "../../assets/icons4/revenue.png";
 import risk from "../../assets/icons4/risk.png";
 import hero from "../../assets/icons4/schero.png";
-import processImg from "../../assets/icons4/sc1.jpg";
+import processImg from "../../assets/icons4/sc1.png";
 
 const SalesforceConsultingPage = () => {
   const features = [
@@ -189,66 +189,64 @@ const SalesforceConsultingPage = () => {
         </div>
       </section>
 
-      {/* Consulting Process */}
-<section className="py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      
-      {/* Text Side */}
-      <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">
-          Our Methodical Salesforce Consulting Process
-        </h2>
-
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              Step 1 - Understanding Your Business
-            </h3>
-            <p className="text-gray-600">
-              Our process commences with a comprehensive evaluation of your current 
-              processes and implementations to gain a deep understanding of your 
-              organization's operations.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              Step 2 - Roadmap for Success
-            </h3>
-            <p className="text-gray-600">
-              Our team of experienced consultants creates a meticulous blueprint for new 
-              Salesforce implementations, focusing on customer-centric strategies that 
-              unlock the full potential of your Salesforce investment.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              Step 3 - Project Kick-Off
-            </h3>
-            <p className="text-gray-600">
-              We facilitate the acquisition of necessary Salesforce licenses and establish 
-              connections with Salesforce's account executives. Additionally, our dedicated 
-              team provides comprehensive assistance in implementing and customizing the 
-              Salesforce platform according to the devised solutions.
-            </p>
+      {/* Our Consulting Process Section with Image on Right */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Our Proven Consulting Process
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Our approach is a collaborative journey designed to ensure your Salesforce solution is a perfect fit for your business. We start with a Discovery Phase to deeply understand your current workflows, challenges, and goals. From there, we move to Solution Design, where we map out a customized Salesforce architecture and a phased implementation plan.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The Implementation & Development phase is where our certified team builds your solution with a focus on best practices. Finally, we provide comprehensive Training & Ongoing Support to ensure high user adoption and long-term success.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <img src={processImg} alt="Salesforce Consulting Process" className="rounded-2xl shadow-lg w-full" />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Image Side */}
-      <div>
-        <img 
-          src={processImg} 
-          alt="Salesforce Consulting Process" 
-          className="w-full h-full object-cover rounded-2xl shadow-md"
-        />
-      </div>
-
-    </div>
-  </div>
-</section>
+      {/* Our Core Service Offerings */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Our Core Service Offerings
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide a full spectrum of services to meet all your Salesforce needs, from strategy to execution and beyond.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Health Checks & Audits</h3>
+              <p className="text-gray-600">Analyze your existing Salesforce org to identify optimization opportunities, fix data issues, and improve performance.</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">User Training & Enablement</h3>
+              <p className="text-gray-600">Customized training programs and workshops to boost user proficiency and adoption.</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Ongoing Support & Maintenance</h3>
+              <p className="text-gray-600">Provide continuous support, manage updates, and handle enhancements to keep your Salesforce org running smoothly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Why Choose Impviser */}

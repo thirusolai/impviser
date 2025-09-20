@@ -8,21 +8,24 @@ import img2 from "../assets/google-cloud.webp";
 import img3 from "../assets/hubspot.webp";
 import img4 from "../assets/salesforce.webp";
 import img5 from "../assets/zoho-crm.webp";
-import SalesforceConsulting from "../assets/icons2/SalesforceConsulting.webp";
-import AppExchangeAppDev from "../assets/icons2/AppExchangeAppDev.webp";
-import Hubspot from "../assets/icons2/Hubspot.webp";
-import MobileAppDev from "../assets/icons2/MobileAppDev.webp";
-import PowerBI from "../assets/icons2/PowerBI.webp";
-import SalesforceAdminSupport from "../assets/icons2/SalesforceAdminSupport.webp";
-import SalesforceDevelopment from "../assets/icons2/SalesforceDevelopment.webp";
-import SalesforceIntegration from "../assets/icons2/SalesforceIntegration.webp";
-import SalesforceIssueSupport from "../assets/icons2/SalesforceIssueSupport.webp";
-import SalesforceMigration from "../assets/icons2/SalesforceMigration.webp";
-import Tableau from "../assets/icons2/Tableau.webp";
-import WebAppDev from "../assets/icons2/WebAppDev.webp";
-import Zoho from "../assets/icons2/Zoho.webp";
+import SalesforceConsulting from "../assets/icons2/SalesforceConsulting.png";
+import SalesforceDevelopment from "../assets/icons2/SalesforceDevelopment.png";
+import SalesforceIntegration from "../assets/icons2/SalesforceIntegration.png";
+import SalesforceMigration from "../assets/icons2/SalesforceMigration.png";
+import SalesforceAdminSupport from "../assets/icons2/SalesforceAdminSupport.png";
+import SalesforceIssueSupport from "../assets/icons2/SalesforceIssueSupport.png";
 import CPQ from "../assets/icons2/CPQ.png";
-import DA from "../assets/icons2/DataAnalytics.webp";
+
+import AppExchangeAppDev from "../assets/icons2/AppExchangeAppDev.png";
+import WebAppDev from "../assets/icons2/WebAppDev.png";
+import MobileAppDev from "../assets/icons2/MobileAppDev.png";
+
+import DataAnalytics from "../assets/icons2/DataAnalytics.webp";
+import PowerBI from "../assets/icons2/PowerBI.webp";
+import Zoho from "../assets/icons2/Zoho.webp";
+import Hubspot from "../assets/icons2/Hubspot.webp";
+import Tableau from "../assets/icons2/Tableau.webp";
+
 import datacloud from "../assets/icons3/datacloud.webp";
 import hubspot from "../assets/icons3/hubspot.webp";
 import powerbi from "../assets/icons3/powerbi.webp";
@@ -119,7 +122,7 @@ const images = [img1, img2, img3, img4,img5];
   {
     category: "Data & Analytics",
     items: [
-      { name: "Data & Analytics Solutions", icon: DA, link: "/services/data-analytics" },
+      { name: "Data & Analytics Solutions", icon: DataAnalytics, link: "/services/data-analytics" },
       { name: "Power BI", icon: PowerBI, link: "/services/power-bi" },
       { name: "Tableau", icon: Tableau, link: "/services/tableau" },
     ],
@@ -467,7 +470,17 @@ const [activeCategory, setActiveCategory] = useState("All");
                       className="flex items-center space-x-3 text-gray-700 hover:text-[#3e4e91] transition-colors duration-300"
                     >
                       <div className="w-9 h-9 flex items-center justify-center">
-                        <img src={item.icon} alt={item.name} className="w-7 h-7 object-contain" />
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          className={`
+                            object-contain
+                            ${group.category === "Salesforce" || group.category === "App Development" 
+                              ? "w-70 h-70"   // Bigger size for Salesforce + App Dev
+                              : "w-5 h-5"     // Smaller size for CRM + Data & Analytics
+                            }
+                          `}
+                        />
                       </div>
                       <span>{item.name}</span>
                     </Link>
