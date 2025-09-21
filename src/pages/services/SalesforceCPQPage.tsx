@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Target, CheckCircle, ArrowRight, Calculator, TrendingUp, Clock, Shield } from 'lucide-react';
+import scale from "../../assets/icons4/scale.png";
+import calc from "../../assets/icons4/calc.png";
+import time from "../../assets/icons4/time.png";
+import risk from "../../assets/icons4/risk.png";
 
 const SalesforceCPQPage = () => {
   const cpqFeatures = [
@@ -28,22 +32,22 @@ const SalesforceCPQPage = () => {
 
   const benefits = [
     {
-      icon: TrendingUp,
+      icon: scale,
       title: '40% Faster Quotes',
       description: 'Reduce quote generation time with automation'
     },
     {
-      icon: Calculator,
+      icon: calc,
       title: '99% Pricing Accuracy',
       description: 'Eliminate pricing errors with automated calculations'
     },
     {
-      icon: Clock,
+      icon: time,
       title: 'Shorter Sales Cycles',
       description: 'Accelerate deals with streamlined quoting process'
     },
     {
-      icon: Shield,
+      icon: risk,
       title: 'Compliance Assured',
       description: 'Built-in approval workflows ensure pricing compliance'
     }
@@ -57,10 +61,7 @@ const SalesforceCPQPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-indigo-200 font-medium">Salesforce CPQ</span>
+                
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Salesforce CPQ Implementation
@@ -149,6 +150,63 @@ const SalesforceCPQPage = () => {
           </div>
         </div>
       </section>
+      
+      {/* Unique Value Proposition Section */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Our Next-Generation CPQ Approach
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        We don't just implement; we engineer your sales engine for future growth.
+      </p>
+    </div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="order-2 lg:order-1">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          Beyond Standard Implementation
+        </h3>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          While many focus on basic setup, our team dives deep into your business logic. We design a solution that isn't just about quoting, but about **scaling your entire revenue operation**. Our approach is built on a foundation of clean architecture and a deep understanding of the Salesforce ecosystem, ensuring your CPQ org is fast, stable, and ready for future innovations.
+        </p>
+        <ul className="space-y-4">
+          <li className="flex items-start space-x-4">
+            <TrendingUp className="flex-shrink-0 w-8 h-8 text-blue-600 mt-1" />
+            <div>
+              <h4 className="font-semibold text-gray-900">Scalable Architecture</h4>
+              <p className="text-gray-600 text-sm">We build with the future in mind, ensuring your CPQ solution can handle exponential growth without performance degradation.</p>
+            </div>
+          </li>
+          <li className="flex items-start space-x-4">
+            <Clock className="flex-shrink-0 w-8 h-8 text-blue-600 mt-1" />
+            <div>
+              <h4 className="font-semibold text-gray-900">Automation-First Mindset</h4>
+              <p className="text-gray-600 text-sm">From configuration to contract, we eliminate manual bottlenecks to accelerate your deal velocity from day one.</p>
+            </div>
+          </li>
+          <li className="flex items-start space-x-4">
+            <Shield className="flex-shrink-0 w-8 h-8 text-blue-600 mt-1" />
+            <div>
+              <h4 className="font-semibold text-gray-900">Robust & Error-Proof</h4>
+              <p className="text-gray-600 text-sm">Our rigorous quality assurance protocols ensure your pricing and quoting rules are 100% accurate, every single time.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div className="order-1 lg:order-2">
+        <div className="w-full h-96 bg-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl">
+          <div className="w-96 h-96 bg-gradient-to-tr from-[#223794] to-[#29ec48] rounded-full absolute -top-16 -right-16 opacity-30 animate-pulse"></div>
+          <div className="w-64 h-64 bg-gradient-to-bl from-[#29ec48] to-[#1798c1] rounded-full absolute -bottom-16 -left-16 opacity-40 animate-pulse-slow"></div>
+          <div className="relative text-white z-10 p-8 text-center backdrop-filter backdrop-blur-sm rounded-xl border border-white/20">
+            <p className="text-2xl font-bold">"Engineered for the future of your business."</p>
+            <p className="text-sm mt-2 text-white/80">From day one, we build for scale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
