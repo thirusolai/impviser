@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Headphones, CheckCircle, ArrowRight, AlertTriangle, Clock, Shield, Users } from 'lucide-react';
+import time from "../../assets/icons4/time.png";
+import exp from "../../assets/icons4/exp.png";
+import sec from "../../assets/icons4/seccon.png";
+import iss from "../../assets/icons4/iss.png";
+import fix from "../../assets/icons4/fix.png";
 
 const SalesforceIssueSupportPage = () => {
   const supportTypes = [
@@ -28,22 +33,22 @@ const SalesforceIssueSupportPage = () => {
 
   const benefits = [
     {
-      icon: Clock,
+      icon: time,
       title: 'Rapid Response',
       description: 'Average 2-hour response time for critical issues'
     },
     {
-      icon: Shield,
+      icon: exp,
       title: 'Expert Resolution',
       description: 'Certified experts with deep troubleshooting experience'
     },
     {
-      icon: Users,
+      icon: sec,
       title: 'Minimal Disruption',
       description: 'Quick fixes that keep your business running smoothly'
     },
     {
-      icon: AlertTriangle,
+      icon: iss,
       title: 'Issue Prevention',
       description: 'Proactive monitoring to prevent future problems'
     }
@@ -139,11 +144,95 @@ const SalesforceIssueSupportPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-6 h-6 text-red-600" />
+                <div className="w-12 h-12 items-center justify-center mx-auto mb-4">
+                  <img src={benefit.icon} alt={benefit.title} className="w-16 h-16 object-contain" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Our Proactive & Strategic Approach Section with Image Placeholder */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Our Proactive and Strategic Approach
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                We believe that great support is proactive, not just reactive. Our methodology is designed to anticipate your needs and identify opportunities for improvement before issues arise. We regularly monitor your system's health, analyze performance metrics, and provide strategic recommendations to enhance your org's efficiency and usability.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Our team works closely with you to understand your evolving business goals. We're not just here to fix problems; we're here to help you get more out of your Salesforce platform, building custom reports, automating tedious tasks, and ensuring user adoption remains high.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2">
+              <img 
+              src={fix} 
+              alt="An individual working on a computer screen to resolve an issue" 
+              className="w-full h-96 object-contain rounded-2xl" 
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">How Our Support Process Works</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Simple steps to get the help you need, when you need it.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {howItWorks.map((step, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm border border-gray-200">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-2xl font-bold text-blue-600">
+                  {step.step}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <p className="text-sm text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Flexible Support Plans Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Flexible Support Plans</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose a plan that fits your business needs and budget.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {supportPlans.map((plan, index) => (
+              <div key={index} className="bg-gray-50 p-8 rounded-xl border border-gray-200 text-center">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.title}</h3>
+                <p className="text-4xl font-extrabold text-blue-600 mb-4">{plan.price}</p>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-2 text-gray-700">
+                      <CheckCircle className="flex-shrink-0 w-5 h-5 text-green-600" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/contact"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center space-x-2"
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
