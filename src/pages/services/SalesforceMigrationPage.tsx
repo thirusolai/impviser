@@ -67,10 +67,7 @@ const SalesforceMigrationPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                  <RefreshCw className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-green-200 font-medium">Salesforce Migration</span>
+                
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">
                 Salesforce Migration Services
