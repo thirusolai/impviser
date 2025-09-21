@@ -13,3 +13,8 @@
 @tailwind utilities;
 
 
+.hero-pattern {
+  background-color: #1798c1;
+  opacity: 1;
+  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #1798c1 10px), repeating-linear-gradient(#29ec4855, #29ec48);
+}
