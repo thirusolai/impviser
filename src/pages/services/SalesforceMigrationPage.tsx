@@ -8,6 +8,8 @@ import perf from "../../assets/icons4/perf.png";
 import mihero from "../../assets/icons4/mihero.png";
 import whatWeDoImg from "../../assets/icons4/wwd.png";
 import approachImg from "../../assets/icons4/approach.png";
+import HeroSection from "../../components/HeroSection";
+
 
 
 
@@ -62,78 +64,48 @@ const SalesforceMigrationPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#223794] to-[#29ec48] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                Salesforce Migration Services
-              </h1>
-              <p className="text-xl text-green-100 leading-relaxed mb-8">
-                Seamlessly migrate your data, processes, and users to Salesforce with zero data loss and minimal business disruption. Our proven migration methodology ensures a smooth transition.
-              </p>
-              <Link 
-                to="/contact" 
-                className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200 inline-flex items-center space-x-2"
-              >
-                <span>Plan Your Migration</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <div className="flex justify-center">
-                  <img 
-                  src={mihero} 
-                  alt="Secure Data Migration" 
-                  className="max-w-xs md:max-w-sm lg:max-w-md"
-                  />
-              </div>
+      <HeroSection
+        backgroundImage={mihero}
+        title="Salesforce Migration Services"
+        subtitle="Seamlessly migrate your data, processes, and users to Salesforce with zero data loss and minimal business disruption. Our proven migration methodology ensures a smooth transition."
+        buttonText="Plan Your Migration"
+        buttonLink="/contact"
+      />
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
 
       {/* Migration Types */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Migration Services We Offer
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive migration solutions for every scenario and business need
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {migrationTypes.map((type, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{type.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{type.description}</p>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-4">What We Include:</h4>
-                  <ul className="space-y-2">
-                    {type.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-600" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+     <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Title and description */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-gray-900 mb-6">
+        Migration Services We Offer
+      </h2>
+      <p className="text-lg lg:text-xl text-gray-600 max-w-5xl mx-auto">
+        We provide comprehensive migration solutions tailored for every business need. From data and system migrations to workflow and application transitions, we ensure a smooth and efficient process with minimal disruption to your operations.
+      </p>
+    </div>
+
+    {/* Single row of 4 services */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-gray-700 text-lg">
+      {migrationTypes.slice(0, 4).map((type, index) => (
+        <div key={index} className="text-center">
+          <p className="font-semibold text-gray-900 mb-2">{type.title}</p>
+          <p className="mb-2">{type.description}</p>
+          <ul className="list-disc list-inside ml-4 mt-1 space-y-1 text-left inline-block text-left">
+            {type.features.map((feature, featureIndex) => (
+              <li key={featureIndex}>{feature}</li>
             ))}
-          </div>
+          </ul>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       
 
@@ -165,22 +137,33 @@ const SalesforceMigrationPage = () => {
       
       {/* Understanding the Migration Process */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Understanding the Migration Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A methodical journey to a successful Salesforce transition.
-            </p>
-          </div>
-          <div className="text-gray-700 text-lg leading-relaxed mb-8">
-            <p className="mb-4">
-              The journey to a successful Salesforce migration is a methodical one, and it's far more than just moving data from one place to another. Our process begins with a comprehensive **Discovery & Planning** phase, where we analyze your existing systems, data models, and business processes to create a detailed migration roadmap. This is followed by **Data Cleansing & Preparation**, a crucial step to ensure the data you're moving is accurate and free of duplicates, which prevents future issues and improves system performance. Next comes the **Migration & Validation** phase, where we execute the plan using specialized tools and rigorous testing to ensure data integrity and zero loss. Finally, the **Go-Live & Post-Migration Support** phase ensures a smooth transition and provides continuous assistance as your team adapts to the new platform.
-            </p>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Understanding the Migration Process
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        How we make your Salesforce transition smooth, reliable, and stress-free.
+      </p>
+    </div>
+
+    <div className="text-gray-700 text-lg leading-relaxed space-y-6">
+      <p>
+        Migrating to Salesforce isn’t just about moving data—it’s about making the change seamless for your business. We start with <strong>Discovery & Planning</strong>, diving deep into your current systems, data structures, and workflows to map out the best approach for your migration.
+      </p>
+      <p>
+        Next comes <strong>Data Cleansing & Preparation</strong>, ensuring the data we move is accurate, organized, and free of duplicates. This step is key to avoiding future headaches and keeping your new system running smoothly.
+      </p>
+      <p>
+        Then we move into <strong>Migration & Validation</strong>, executing the migration with precision and verifying everything along the way to maintain data integrity. Our goal is zero disruption, so your business keeps moving without hiccups.
+      </p>
+      <p>
+        Finally, during <strong>Go-Live & Post-Migration Support</strong>, we stay by your side, helping your team adjust and ensuring the new system delivers exactly what you need. With our process, Salesforce isn’t just implemented—it’s adopted confidently.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* What We Do Section with Image on Right */}
       <section className="py-20 bg-white">
@@ -263,11 +246,14 @@ const SalesforceMigrationPage = () => {
             to="/contact" 
             className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200 inline-flex items-center space-x-2"
           >
-            <span>Start Migration Planning</span>
-            <ArrowRight className="w-5 h-5" />
+            Book Now
           </Link>
         </div>
       </section>
+
+
+       
+
     </div>
   );
 };

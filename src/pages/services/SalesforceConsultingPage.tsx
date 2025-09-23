@@ -10,6 +10,8 @@ import processImg from "../../assets/icons4/sc1.png";
 import sc2 from "../../assets/icons4/sc2.png";
 import sc3 from "../../assets/icons4/sc3.png";
 import sc4 from "../../assets/icons4/sc4.png";
+import sc5 from "../../assets/icons4/sc5.png";
+import HeroSection from "../../components/HeroSection";
 
 const SalesforceConsultingPage = () => {
   const features = [
@@ -56,57 +58,42 @@ const SalesforceConsultingPage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 text-white hero-pattern">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                Strategic Salesforce Consulting Services
-              </h1>
-              <p className="text-xl text-blue-100 leading-relaxed mb-8">
-                Maximize your Salesforce investment with expert strategic guidance, implementation planning, and optimization services from certified Salesforce consultants.
-              </p>
-              <Link 
-                to="/contact" 
-                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center space-x-2"
-              >
-                <span>Get Expert Consultation</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <img 
-                  src={hero} 
-                  alt="Salesforce Success Partner" 
-                  className="w-full h-full object-contain rounded-2xl"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+  backgroundImage={hero}
+  title="Strategic Salesforce Consulting Services"
+  subtitle="Maximize your Salesforce investment with expert strategic guidance, implementation planning, and optimization services from certified Salesforce consultants."
+  buttonText="Consult Now"
+  buttonLink="/contact"
+/>
+
+
 
       {/* Overview Section - Redesigned as a single paragraph */}
 <section className="py-20 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold text-gray-900 mb-6">
-        What is Salesforce Consulting?
-      </h2>
-      <p className="text-lg text-gray-600 leading-relaxed mb-6">
-        Salesforce consulting is the practice of leveraging expert guidance to unlock the full potential of your Salesforce platform. It's more than just technical implementation; it's a strategic partnership. Our certified consultants work closely with your organization to develop a comprehensive Salesforce roadmap, ensuring every feature is aligned with your specific business goals. We specialize in business process optimization, streamlining complex workflows to improve efficiency and productivity. Our services include change management and user adoption strategies to ensure your team not only uses the new system but embraces it, leading to higher ROI. We also provide best practices implementation and governance setup to maintain a clean, scalable, and secure Salesforce environment, minimizing long-term risks and maximizing your investment.
-      </p>
-      <div className="flex items-center justify-center space-x-3 text-blue-600 mt-8">
-        <Award className="w-6 h-6" />
-        <span className="font-semibold">Your Partner for Salesforce Success</span>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Left: Image */}
+      <div className="flex justify-center lg:justify-start">
+        <img
+          src={sc5} // replace with the relevant image
+          alt="Salesforce Consulting Overview"
+          className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+        />
+      </div>
+
+      {/* Right: Paragraph */}
+      <div>
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+          What is Salesforce Consulting?
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          Salesforce consulting is the practice of leveraging expert guidance to unlock the full potential of your Salesforce platform. It's more than just technical implementation; it's a strategic partnership. Our certified consultants work closely with your organization to develop a comprehensive Salesforce roadmap, ensuring every feature is aligned with your specific business goals. We specialize in business process optimization, streamlining complex workflows to improve efficiency and productivity. Our services include change management and user adoption strategies to ensure your team not only uses the new system but embraces it, leading to higher ROI. We also provide best practices implementation and governance setup to maintain a clean, scalable, and secure Salesforce environment, minimizing long-term risks and maximizing your investment.
+        </p>
       </div>
     </div>
   </div>
 </section>
+
 
       {/* Benefits */}
       <section className="py-20 bg-gray-50">
@@ -135,88 +122,7 @@ const SalesforceConsultingPage = () => {
         </div>
       </section>
 
-      {/* Industries We Serve Section - Redesigned to be more elaborate */}
-<section className="py-20 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-        Industries We Empower with Salesforce
-      </h2>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        Our deep industry knowledge allows us to tailor Salesforce solutions that solve your unique challenges and drive growth, no matter your sector.
-      </p>
-    </div>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* Financial Services */}
-      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
-        <div className="flex items-center space-x-4 mb-4">
-          <Building2 className="w-8 h-8 text-blue-600" />
-          <h3 className="text-xl font-semibold text-gray-900">Financial Services</h3>
-        </div>
-        <p className="text-gray-700 leading-relaxed">
-          From wealth management to banking and insurance, we help financial firms enhance customer relationships, automate compliance processes, and improve client onboarding with secure and integrated Salesforce solutions.
-        </p>
-      </div>
       
-      {/* Healthcare */}
-      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
-        <div className="flex items-center space-x-4 mb-4">
-          <Clock className="w-8 h-8 text-green-600" />
-          <h3 className="text-xl font-semibold text-gray-900">Healthcare</h3>
-        </div>
-        <p className="text-gray-700 leading-relaxed">
-          We build solutions that streamline patient care, manage clinical data, and improve communication between providers and patients, all while ensuring full HIPAA compliance and data security within Health Cloud.
-        </p>
-      </div>
-
-      {/* Manufacturing */}
-      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
-        <div className="flex items-center space-x-4 mb-4">
-          <Shield className="w-8 h-8 text-purple-600" />
-          <h3 className="text-xl font-semibold text-gray-900">Manufacturing</h3>
-        </div>
-        <p className="text-gray-700 leading-relaxed">
-          Optimize your supply chain, enhance partner relationships, and gain a 360-degree view of your customer base. Our solutions improve asset management, field service efficiency, and sales forecasting.
-        </p>
-      </div>
-
-      {/* Real Estate */}
-      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
-        <div className="flex items-center space-x-4 mb-4">
-          <Users className="w-8 h-8 text-orange-600" />
-          <h3 className="text-xl font-semibold text-gray-900">Real Estate</h3>
-        </div>
-        <p className="text-gray-700 leading-relaxed">
-          Centralize property and client data, automate follow-ups, and streamline transaction processes. We help real estate firms manage leads, improve agent productivity, and deliver exceptional client experiences.
-        </p>
-      </div>
-
-      {/* Technology */}
-      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
-        <div className="flex items-center space-x-4 mb-4">
-          <TrendingUp className="w-8 h-8 text-indigo-600" />
-          <h3 className="text-xl font-semibold text-gray-900">Technology</h3>
-        </div>
-        <p className="text-gray-700 leading-relaxed">
-          From startups to established tech companies, we help manage complex sales cycles, enhance customer support with Service Cloud, and automate processes to scale quickly and efficiently.
-        </p>
-      </div>
-      
-      {/* Non-Profit */}
-      <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
-        <div className="flex items-center space-x-4 mb-4">
-          <Award className="w-8 h-8 text-red-600" />
-          <h3 className="text-xl font-semibold text-gray-900">Non-Profit</h3>
-        </div>
-        <p className="text-gray-700 leading-relaxed">
-          We assist non-profit organizations in managing donor relations, tracking fundraising campaigns, and automating volunteer management, helping them focus on their mission.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
       {/* Our Consulting Process Section with Image on Right */}
       <section className="py-20 bg-gray-100">
@@ -376,29 +282,22 @@ const SalesforceConsultingPage = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Optimize Your Salesforce Investment?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Schedule a free consultation to discuss your Salesforce strategy and implementation needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
-            >
-              Schedule Free Consultation
-            </Link>
-            <Link 
-              to="/customer-stories" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200"
-            >
-              View Success Stories
-            </Link>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+      Ready to Elevate Your Salesforce Experience?
+    </h2>
+    <p className="text-xl text-blue-100 mb-8">
+      Book a consultation today and let our experts guide you to faster results, higher adoption, and measurable growth with Salesforce.
+    </p>
+    <Link 
+      to="/contact" 
+      className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
+    >
+      Book Now
+    </Link>
+  </div>
+</section>
+
     </div>
   );
 };
