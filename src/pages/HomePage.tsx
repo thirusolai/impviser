@@ -20,7 +20,7 @@ import AppExchangeAppDev from "../assets/icons2/AppExchangeAppDev.png";
 import WebAppDev from "../assets/icons2/WebAppDev.png";
 import MobileAppDev from "../assets/icons2/MobileAppDev.png";
 
-import DataAnalytics from "../assets/icons2/DataAnalytics.webp";
+import DataAnalytics from "../assets/icons2/analytics.png";
 import PowerBI from "../assets/icons2/PowerBI.webp";
 import Zoho from "../assets/icons2/Zoho.webp";
 import Hubspot from "../assets/icons2/Hubspot.webp";
@@ -102,14 +102,17 @@ const images = [img1, img2, img3, img4,img5];
   {
     category: "Salesforce",
     items: [
-      { name: "Salesforce Consulting", icon: SalesforceConsulting, link: "/services/salesforce-consulting" },
-      { name: "Salesforce Migration", icon: SalesforceMigration, link: "/services/salesforce-migration" },
-      { name: "Salesforce Integration", icon: SalesforceIntegration, link: "/services/salesforce-integration" },
-      { name: "AppExchange App Development", icon: AppExchangeAppDev, link: "/services/appexchange-app" },
-      { name: "Salesforce Admin Support", icon: SalesforceAdminSupport, link: "/services/salesforce-admin" },
-      { name: "Salesforce CPQ Implementation", icon: CPQ, link: "/services/salesforce-cpq" },
-      { name: "Salesforce Development", icon: SalesforceDevelopment, link: "/services/salesforce-dev" },
-      { name: "Salesforce Issue Support", icon: SalesforceIssueSupport, link: "/services/salesforce-support" },
+      { name: "Salesforce Consulting", icon: <Users className="w-6 h-6 text-green-500" />, link: "/services/salesforce-consulting" },
+      { name: "Salesforce Migration", icon: <TrendingUp className="w-6 h-6 text-green-500" />, link: "/services/salesforce-migration" },
+      { name: "Salesforce Integration", icon: <Building2 className="w-6 h-6 text-green-500" />, link: "/services/salesforce-integration" },
+      { name: "AppExchange App Development", icon: <Cpu className="w-6 h-6 text-green-500" />, link: "/services/appexchange-app" },
+      { name: "Salesforce Admin Support", icon: <Shield className="w-6 h-6 text-green-500" />, link: "/services/salesforce-admin" },
+      { name: "Salesforce CPQ Implementation", icon: <Award className="w-6 h-6 text-green-500" />, link: "/services/salesforce-cpq" },
+      { name: "Salesforce Development", icon: <Code2 className="w-6 h-6 text-green-500" />, link: "/services/salesforce-dev" },
+      { name: "Salesforce Issue Support", icon: <Zap className="w-6 h-6 text-green-500" />, link: "/services/salesforce-support" },
+      { name: "Data & Analytics Solutions", icon: <BarChart3 className="w-6 h-6 text-green-500" />, link: "/services/data-analytics" },
+      { name: "Hire A Salesforce Expert", icon: <Users className="w-6 h-6 text-green-500" />, link: "/services/hire-salesforce-expert" },
+      { name: "AI Powered Salesforce Implementation", icon: <Bot className="w-6 h-6 text-green-500" />, link: "/services/ai-powered-salesforce" },
     ],
   },
   {
@@ -130,11 +133,12 @@ const images = [img1, img2, img3, img4,img5];
   {
     category: "App Development",
     items: [
-      { name: "Web App Development", icon: WebAppDev, link: "/services/web-app" },
-      { name: "Mobile App Development", icon: MobileAppDev, link: "/services/mobile-app" },
+      { name: "Web App Development", icon: <Monitor className="w-6 h-6 text-green-500" />, link: "/services/web-app" },
+      { name: "Mobile App Development", icon: <Smartphone className="w-6 h-6 text-green-500" />, link: "/services/mobile-app" },
     ],
   },
 ];
+
 
 
 
@@ -470,17 +474,12 @@ const [activeCategory, setActiveCategory] = useState("All");
                       className="flex items-center space-x-3 text-gray-700 hover:text-[#3e4e91] transition-colors duration-300"
                     >
                       <div className="w-9 h-9 flex items-center justify-center">
-                        <img
-                          src={item.icon}
-                          alt={item.name}
-                          className={`
-                            object-contain
-                            ${group.category === "Salesforce" || group.category === "App Development" 
-                              ? "w-70 h-70"   // Bigger size for Salesforce + App Dev
-                              : "w-5 h-5"     // Smaller size for CRM + Data & Analytics
-                            }
-                          `}
-                        />
+                        {typeof item.icon === "string" ? (
+  <img src={item.icon} alt={item.name} className="w-5 h-5 object-contain" />
+) : (
+  item.icon
+)}
+
                       </div>
                       <span>{item.name}</span>
                     </Link>

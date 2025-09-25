@@ -29,7 +29,8 @@ const HeroSection: React.FC<HeroProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">{title}</h1>
-            <p className="text-xl text-purple-100 leading-relaxed mb-8">{subtitle}</p>
+            <p className="text-xl text-white leading-relaxed mb-8">{subtitle}</p>
+
 
             <Link
               to={buttonLink}

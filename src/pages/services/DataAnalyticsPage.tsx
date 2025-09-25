@@ -150,24 +150,7 @@ const DataAnalyticsPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-emerald-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Unlock Your Data's Potential?
-          </h2>
-          <p className="text-xl text-emerald-100 mb-8">
-            Transform your data into actionable insights with our analytics solutions.
-          </p>
-          <Link 
-            to="/contact" 
-            className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors duration-200 inline-flex items-center space-x-2"
-          >
-            <span>Start Analytics Project</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
+      
     </div>
   );
 };

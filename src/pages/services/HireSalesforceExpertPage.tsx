@@ -150,24 +150,7 @@ const HireSalesforceExpertPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-violet-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Hire a Salesforce Expert?
-          </h2>
-          <p className="text-xl text-violet-100 mb-8">
-            Connect with certified Salesforce professionals for your next project.
-          </p>
-          <Link 
-            to="/contact" 
-            className="bg-white text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-violet-50 transition-colors duration-200 inline-flex items-center space-x-2"
-          >
-            <span>Find Your Expert</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
+      
     </div>
   );
 };

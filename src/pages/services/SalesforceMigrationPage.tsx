@@ -136,7 +136,7 @@ const SalesforceMigrationPage = () => {
       </section>
       
       {/* Understanding the Migration Process */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
       <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -166,7 +166,7 @@ const SalesforceMigrationPage = () => {
 
 
       {/* What We Do Section with Image on Right */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -190,7 +190,7 @@ const SalesforceMigrationPage = () => {
       </section>
 
       {/* Our Proven Approach Section with Image on Left */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -214,7 +214,7 @@ const SalesforceMigrationPage = () => {
       </section>
 
       {/* Delivering Tangible Value Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -233,23 +233,7 @@ const SalesforceMigrationPage = () => {
       </section>
 
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Migrate to Salesforce?
-          </h2>
-          <p className="text-xl text-green-100 mb-8">
-            Let's discuss your migration requirements and create a risk-free migration plan.
-          </p>
-          <Link 
-            to="/contact" 
-            className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200 inline-flex items-center space-x-2"
-          >
-            Book Now
-          </Link>
-        </div>
-      </section>
+      
 
 
        

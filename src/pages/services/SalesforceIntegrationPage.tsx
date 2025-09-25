@@ -172,23 +172,7 @@ const SalesforceIntegrationPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Integrate Your Systems?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Let's connect your business systems for improved efficiency and data visibility.
-          </p>
-          <Link 
-            to="/contact" 
-            className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors duration-200 inline-flex items-center space-x-2"
-          >
-            Book Now
-          </Link>
-        </div>
-      </section>
+      
     </div>
   );
 };

@@ -236,24 +236,7 @@ const SalesforceIssueSupportPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Need Immediate Salesforce Support?
-          </h2>
-          <p className="text-xl text-red-100 mb-8">
-            Get expert help resolving your Salesforce issues quickly and effectively.
-          </p>
-          <Link 
-            to="/contact" 
-            className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors duration-200 inline-flex items-center space-x-2"
-          >
-            <span>Get Support Now</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
+      
     </div>
   );
 };

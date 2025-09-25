@@ -6,6 +6,12 @@ import scale from "../../assets/icons4/scale.png";
 import revenue from "../../assets/icons4/revenue.png";
 import risk from "../../assets/icons4/risk.png";
 import AX from "../../assets/icons4/ax.png";
+import AP from "../../assets/icons4/apphero.png";
+import HeroSection from "../../components/HeroSection";
+import proven from "../../assets/icons4/proven-expertise.png";
+import security from "../../assets/icons4/security-first.png";
+import support from "../../assets/icons4/end-to-end-support.png";
+
 
 const AppExchangePage = () => {
   const appTypes = [
@@ -57,74 +63,43 @@ const AppExchangePage = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#223794] to-[#29ec48] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                AppExchange App Development
-              </h1>
-              <p className="text-xl text-orange-100 leading-relaxed mb-8">
-                Build and publish custom Salesforce applications on the AppExchange marketplace. From concept to security review, we handle the complete development lifecycle.
-              </p>
-              <Link 
-                to="/contact" 
-                className="bg-white text-orange-900 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors duration-200 inline-flex items-center space-x-2"
-              >
-                <span>Build Your App</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                    <Store className="w-12 h-12 text-white" />
-                  </div>
-                  <p className="text-lg font-medium">AppExchange Success</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        backgroundImage={AP}
+        title="AppExchange App Development"
+        subtitle="Build and publish custom Salesforce applications on the AppExchange marketplace. From concept to security review, we handle the complete development lifecycle."
+        buttonText="Build Your App"
+        buttonLink="/contact"
+      />
 
-      {/* App Types */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Types of Apps We Build
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Custom Salesforce applications designed for the AppExchange marketplace
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {appTypes.map((type, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{type.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{type.description}</p>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-4">Features:</h4>
-                  <ul className="space-y-2">
-                    {type.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-600" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+     <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Title and description */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-gray-900 mb-6">
+        Types of Apps We Build
+      </h2>
+      <p className="text-lg lg:text-xl text-gray-600 max-w-5xl mx-auto">
+        Custom Salesforce applications designed for the AppExchange marketplace. We craft solutions tailored to your business, ensuring scalability, efficiency, and seamless integration.
+      </p>
+    </div>
+
+    {/* Single row of apps */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-gray-700 text-lg">
+      {appTypes.slice(0, 4).map((type, index) => (
+        <div key={index} className="text-center">
+          <p className="font-semibold text-gray-900 mb-2">{type.title}</p>
+          <p className="mb-2">{type.description}</p>
+          <ul className="list-disc list-inside ml-4 mt-1 space-y-1 text-left inline-block text-left">
+            {type.features.map((feature, featureIndex) => (
+              <li key={featureIndex}>{feature}</li>
             ))}
-          </div>
+          </ul>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Benefits */}
       <section className="py-20 bg-gray-50">
@@ -177,59 +152,57 @@ const AppExchangePage = () => {
 
       {/* Why Impviser is Your Ideal Partner Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Impviser is Your Ideal Partner
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Partner with an experienced team that understands the nuances of the AppExchange marketplace.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Expertise</h3>
-              <p className="text-gray-600">Our developers have a deep understanding of the Salesforce platform and AppExchange requirements.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Security First Approach</h3>
-              <p className="text-gray-600">We build apps with security in mind, ensuring a smooth and successful security review process.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">End-to-End Support</h3>
-              <p className="text-gray-600">We guide you through the entire lifecycle, from initial idea to app publication and beyond.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Why Impviser is Your Ideal Partner
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Partner with an experienced team that understands the nuances of the AppExchange marketplace.
+      </p>
+    </div>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Build Your AppExchange App?
-          </h2>
-          <p className="text-xl text-orange-100 mb-8">
-            Let's turn your Salesforce app idea into a successful AppExchange product.
-          </p>
-          <Link 
-            to="/contact" 
-            className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors duration-200 inline-flex items-center space-x-2"
-          >
-            <span>Start App Development</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+        <div className="w-18 h-16 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
+          <img
+  src={proven}
+  alt="Proven Expertise"
+  className="w-10 h-10 object-contain"
+/>
+
         </div>
-      </section>
+        <h3 className="text-lg font-semibold text-gray-900 mb-3">Proven Expertise</h3>
+        <p className="text-gray-600 text-sm">
+          Our developers have a deep understanding of the Salesforce platform and AppExchange requirements.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+        <div className="w-18 h-16 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
+          <img src={security} alt="Security First Approach" className="w-10 h-10 object-contain" />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-3">Security First Approach</h3>
+        <p className="text-gray-600 text-sm">
+          We build apps with security in mind, ensuring a smooth and successful security review process.
+        </p>
+      </div>
+
+      <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+        <div className="w-18 h-16 bg-white rounded-lg flex items-center justify-center mx-auto mb-4">
+          <img src={support} alt="End-to-End Support" className="w-10 h-10 object-contain" />
+        </div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-3">End-to-End Support</h3>
+        <p className="text-gray-600 text-sm">
+          We guide you through the entire lifecycle, from initial idea to app publication and beyond.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      
     </div>
   );
 };

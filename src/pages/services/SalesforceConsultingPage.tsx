@@ -234,69 +234,49 @@ const SalesforceConsultingPage = () => {
 </section>
 
             {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                How long does a Salesforce implementation take?
-              </h3>
-              <p className="text-gray-600">
-                Timelines vary by project scope, but most implementations take between 8–12 weeks 
-                from discovery to go-live.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Do you provide ongoing support after implementation?
-              </h3>
-              <p className="text-gray-600">
-                Yes. We offer continuous support, user training, and optimization services to ensure 
-                long-term success with Salesforce.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Can you help us migrate data from our existing system?
-              </h3>
-              <p className="text-gray-600">
-                Absolutely. Our team specializes in secure data migration, ensuring accuracy and 
-                minimal downtime during the transition.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Which industries do you serve?
-              </h3>
-              <p className="text-gray-600">
-                We work across multiple industries including finance, healthcare, real estate, 
-                manufacturing, technology, and non-profit sectors.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#223794] to-[#1798c1]">
-  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-      Ready to Elevate Your Salesforce Experience?
+      <section className="py-20 bg-gray-900 text-white">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
+      Frequently Asked Questions
     </h2>
-    <p className="text-xl text-blue-100 mb-8">
-      Book a consultation today and let our experts guide you to faster results, higher adoption, and measurable growth with Salesforce.
-    </p>
-    <Link 
-      to="/contact" 
-      className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
-    >
-      Book Now
-    </Link>
+    <div className="space-y-6">
+      {[
+        {
+          q: "How long does a Salesforce implementation take?",
+          a: "Timelines vary by project scope, but most implementations take between 8–12 weeks from discovery to go-live.",
+        },
+        {
+          q: "Do you provide ongoing support after implementation?",
+          a: "Yes. We offer continuous support, user training, and optimization services to ensure long-term success with Salesforce.",
+        },
+        {
+          q: "Can you help us migrate data from our existing system?",
+          a: "Absolutely. Our team specializes in secure data migration, ensuring accuracy and minimal downtime during the transition.",
+        },
+        {
+          q: "Which industries do you serve?",
+          a: "We work across multiple industries including finance, healthcare, real estate, manufacturing, technology, and non-profit sectors.",
+        },
+      ].map((item, idx) => (
+        <details
+          key={idx}
+          className="group bg-gray-800 rounded-lg p-4 cursor-pointer transition"
+        >
+          <summary className="flex justify-between items-center font-semibold text-lg list-none">
+            {item.q}
+            <span className="ml-2 text-gray-400 group-open:rotate-180 transition-transform">
+              ▼
+            </span>
+          </summary>
+          <p className="mt-2 text-gray-300">{item.a}</p>
+        </details>
+      ))}
+    </div>
   </div>
 </section>
+
+
+      
 
     </div>
   );
