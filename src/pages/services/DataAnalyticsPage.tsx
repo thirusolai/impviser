@@ -1,6 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart3, CheckCircle, ArrowRight, Database, TrendingUp, Eye, Brain } from 'lucide-react';
+import HeroSection from "../../components/HeroSection";
+import dh from "../../assets/icons5/dathero.png";
+import sideImg from "../../assets/icons5/sideImg.png";
+import udv from "../../assets/icons5/udv.png";
+import ins from "../../assets/icons5/insights.png";
+import dd from "../../assets/icons5/dd.png";
+import vb from "../../assets/icons5/visibility.png";
 
 const DataAnalyticsPage = () => {
   const analyticsServices = [
@@ -27,102 +34,74 @@ const DataAnalyticsPage = () => {
   ];
 
   const benefits = [
-    {
-      icon: Eye,
-      title: 'Better Visibility',
-      description: 'Clear insights into business performance and trends'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Data-Driven Decisions',
-      description: 'Make informed decisions based on accurate data analysis'
-    },
-    {
-      icon: Brain,
-      title: 'Predictive Insights',
-      description: 'Forecast future trends and opportunities'
-    },
-    {
-      icon: Database,
-      title: 'Unified Data View',
-      description: 'Single source of truth for all business data'
-    }
-  ];
+  {
+    icon: vb,
+    title: 'Better Visibility',
+    description: 'Clear insights into business performance and trends'
+  },
+  {
+    icon: dd,
+    title: 'Data-Driven Decisions',
+    description: 'Make informed decisions based on accurate data analysis'
+  },
+  {
+    icon: ins,
+    title: 'Predictive Insights',
+    description: 'Forecast future trends and opportunities'
+  },
+  {
+    icon: udv,
+    title: 'Unified Data View',
+    description: 'Single source of truth for all business data'
+  }
+];
+
 
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                  <BarChart3 className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-emerald-200 font-medium">Data & Analytics</span>
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                Data & Analytics Solutions
-              </h1>
-              <p className="text-xl text-emerald-100 leading-relaxed mb-8">
-                Transform your business data into powerful insights with advanced analytics, business intelligence, and data visualization solutions.
-              </p>
-              <Link 
-                to="/contact" 
-                className="bg-white text-emerald-900 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors duration-200 inline-flex items-center space-x-2"
-              >
-                <span>Explore Analytics Solutions</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                    <BarChart3 className="w-12 h-12 text-white" />
-                  </div>
-                  <p className="text-lg font-medium">Data-Driven Insights</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        backgroundImage={dh}
+        title="Data & Analytics Solutions"
+        subtitle="Transform your business data into powerful insights with advanced analytics, business intelligence, and data visualization solutions."
+        buttonText="Explore Analytics Solutions"
+        buttonLink="/contact"
+      />
 
       {/* Analytics Services */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Analytics Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive data and analytics solutions to drive business intelligence
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsServices.map((service, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-4">What We Deliver:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-600" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Analytics Services
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Comprehensive data and analytics solutions to drive business intelligence
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-12">
+      {analyticsServices.map((service, index) => (
+        <div
+          key={index}
+          className="p-8 rounded-2xl border border-gray-200 bg-gray-50 hover:shadow-lg transition"
+        >
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+          <p className="text-gray-600 mb-5">{service.description}</p>
+          <div className="space-y-2">
+            {service.features.map((feature, i) => (
+              <p key={i} className="text-gray-700 text-sm border-l-4 border-blue-500 pl-3">
+                {feature}
+              </p>
             ))}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       {/* Benefits */}
       <section className="py-20 bg-gray-50">
@@ -139,9 +118,10 @@ const DataAnalyticsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-6 h-6 text-emerald-600" />
-                </div>
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+  <img src={benefit.icon} alt={benefit.title} className="w-12 h-12 object-contain" />
+</div>
+
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm">{benefit.description}</p>
               </div>
@@ -149,6 +129,67 @@ const DataAnalyticsPage = () => {
           </div>
         </div>
       </section>
+
+      {/* sec1 */}
+      <section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src={sideImg} alt="Data Analytics Process" className="rounded-2xl shadow-lg w-full" />
+    </div>
+    <div>
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        Empower Your Business with Data
+      </h2>
+      <p className="text-lg text-gray-600 mb-6">
+        Our solutions help you turn complex datasets into clear, actionable insights. 
+        Whether you want to improve operations, enhance customer experiences, or forecast market trends, 
+        we provide the right tools and expertise to make it happen.
+      </p>
+      <ul className="space-y-3">
+        <li className="flex items-center space-x-3">
+          <CheckCircle className="w-5 h-5 text-green-600" />
+          <span>Real-time insights tailored for your goals</span>
+        </li>
+        <li className="flex items-center space-x-3">
+          <CheckCircle className="w-5 h-5 text-green-600" />
+          <span>Seamless integration with your business apps</span>
+        </li>
+        <li className="flex items-center space-x-3">
+          <CheckCircle className="w-5 h-5 text-green-600" />
+          <span>Future-ready analytics infrastructure</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{/* sec2 */}
+<section className="py-20 bg-gray-50">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+      Why Data Analytics Matters
+    </h2>
+    <p className="text-lg text-gray-600 mb-8">
+      In today's competitive world, data is the backbone of successful decision-making. 
+      By unlocking insights hidden in your data, you can stay ahead of the competition, 
+      improve operational efficiency, and deliver better value to your customers.
+    </p>
+    <div className="grid md:grid-cols-3 gap-8 text-left">
+      <div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">Efficiency</h3>
+        <p className="text-gray-600">Optimize processes and reduce costs with smarter workflows.</p>
+      </div>
+      <div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">Innovation</h3>
+        <p className="text-gray-600">Use predictive analytics to develop new strategies and products.</p>
+      </div>
+      <div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">Growth</h3>
+        <p className="text-gray-600">Unlock new revenue streams and scale with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       
     </div>
