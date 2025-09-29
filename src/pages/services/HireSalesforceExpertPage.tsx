@@ -1,6 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, CheckCircle, ArrowRight, Award, Clock, TrendingUp, Shield } from 'lucide-react';
+import HeroSection from "../../components/HeroSection";
+import hh from "../../assets/icons5/hihero.png";
+import cert from "../../assets/icons5/cert.png";
+import flex from "../../assets/icons5/flex.png";
+import track from "../../assets/icons5/track.png";
+import quality from "../../assets/icons5/quality.png";
+
+
 
 const HireSalesforceExpertPage = () => {
   const expertTypes = [
@@ -27,128 +35,154 @@ const HireSalesforceExpertPage = () => {
   ];
 
   const benefits = [
-    {
-      icon: Award,
-      title: 'Certified Experts',
-      description: 'All experts hold current Salesforce certifications'
-    },
-    {
-      icon: Clock,
-      title: 'Flexible Engagement',
-      description: 'Part-time, full-time, or project-based arrangements'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Proven Track Record',
-      description: 'Experts with successful project delivery history'
-    },
-    {
-      icon: Shield,
-      title: 'Quality Assured',
-      description: 'Rigorous vetting process ensures top-tier talent'
-    }
-  ];
+  {
+    icon: cert,
+    title: 'Certified Experts',
+    description: 'All experts hold current Salesforce certifications'
+  },
+  {
+    icon: flex,
+    title: 'Flexible Engagement',
+    description: 'Part-time, full-time, or project-based arrangements'
+  },
+  {
+    icon: track,
+    title: 'Proven Track Record',
+    description: 'Experts with successful project delivery history'
+  },
+  {
+    icon: quality,
+    title: 'Quality Assured',
+    description: 'Rigorous vetting process ensures top-tier talent'
+  }
+];
+
 
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-violet-200 font-medium">Hire Salesforce Expert</span>
-              </div>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                Hire a Salesforce Expert
-              </h1>
-              <p className="text-xl text-violet-100 leading-relaxed mb-8">
-                Access top-tier Salesforce talent for your projects. Our certified experts are available for short-term projects or long-term engagements.
-              </p>
-              <Link 
-                to="/contact" 
-                className="bg-white text-violet-900 px-8 py-4 rounded-lg font-semibold hover:bg-violet-50 transition-colors duration-200 inline-flex items-center space-x-2"
-              >
-                <span>Find Your Expert</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto">
-                    <Award className="w-12 h-12 text-white" />
-                  </div>
-                  <p className="text-lg font-medium">Certified Salesforce Experts</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        backgroundImage={hh}
+        title="Hire a Salesforce Expert"
+        subtitle="Access top-tier Salesforce talent for your projects. Our certified experts are available for short-term projects or long-term engagements."
+        buttonText="Find Your Expert"
+        buttonLink="/contact"
+      />
 
       {/* Expert Types */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Salesforce Experts Available
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose from our pool of certified Salesforce professionals
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {expertTypes.map((type, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{type.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{type.description}</p>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-4">Core Skills:</h4>
-                  <ul className="space-y-2">
-                    {type.skills.map((skill, skillIndex) => (
-                      <li key={skillIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-600" />
-                        <span className="text-gray-700">{skill}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+<section className="py-20 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Salesforce Experts Available
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Choose from our pool of certified Salesforce professionals
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {expertTypes.map((type, index) => (
+        <div key={index} className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition">
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">{type.title}</h3>
+          <p className="text-gray-600 leading-relaxed mb-5">{type.description}</p>
+          <div className="flex flex-wrap gap-2">
+            {type.skills.map((skill, skillIndex) => (
+              <span
+                key={skillIndex}
+                className="px-3 py-1 bg-violet-100 text-violet-700 rounded-full text-sm font-medium"
+              >
+                {skill}
+              </span>
             ))}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* Engagement Models */}
+<section className="py-20 bg-white">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Engagement Models
+      </h2>
+      <p className="text-xl text-gray-600">
+        Choose how you’d like to collaborate with our Salesforce experts
+      </p>
+    </div>
+
+    <div className="space-y-12">
+      <div>
+        <h3 className="text-2xl font-semibold text-gray-900 mb-3">Full-Time</h3>
+        <p className="text-gray-600 leading-relaxed">
+          A dedicated expert joins your team full-time, working closely with you
+          on a daily basis. Best suited for organizations with ongoing
+          Salesforce projects that require constant attention, deeper
+          collaboration, and consistent progress.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-gray-900 mb-3">Part-Time</h3>
+        <p className="text-gray-600 leading-relaxed">
+          Flexible availability for teams that need occasional Salesforce
+          support. Ideal when you don’t require a full 40-hour commitment but
+          still want access to certified expertise at regular intervals.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold text-gray-900 mb-3">Project-Based</h3>
+        <p className="text-gray-600 leading-relaxed">
+          Engagement focused on a defined scope of work — whether it’s a system
+          migration, new implementation, or optimization project. Our experts
+          work toward clear deliverables within agreed timelines.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Benefits */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Hire Our Experts?
-            </h2>
-            <p className="text-xl text-gray-600">
-              Benefits of working with our certified Salesforce professionals
-            </p>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Why Hire Our Experts?
+      </h2>
+      <p className="text-xl text-gray-600">
+        Benefits of working with our certified Salesforce professionals
+      </p>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {benefits.map((benefit, index) => (
+        <div
+          key={index}
+          className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center"
+        >
+          <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <img
+              src={benefit.icon}
+              alt={benefit.title}
+              className="w-16 h-16 object-contain"
+            />
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
-                <div className="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-6 h-6 text-violet-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 text-sm">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            {benefit.title}
+          </h3>
+          <p className="text-gray-600 text-sm">{benefit.description}</p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       
     </div>
